@@ -1,5 +1,4 @@
 import 'package:event_hub/src/feature/profile/organizer_profile.dart';
-import 'package:event_hub/src/feature/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'core/theme/app_theme.dart';
