@@ -1,7 +1,10 @@
 import 'package:event_hub/core/styles/color_styles.dart';
 import 'package:event_hub/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:readmore/readmore.dart';
+
+import 'widgets/profile_display_details.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});
@@ -32,28 +35,8 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: 29,
               ),
-              const Align(
-                child: CircleAvatar(
-                  backgroundImage:
-                      AssetImage("assets/images/profile_avatar.png"),
-                  radius: 96 / 2,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Align(
-                child: Text(
-                  "Ashfak Sayem",
-                  style: AppTextStyle.h4.copyWith(
-                    color: AppColorStyle.darkTextColor,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const FollowersAndFollowing(
+              const ProfileDisplayDetails(
+                displayName: "Ashfak Sayem",
                 followers: "350",
                 following: "264",
               ),
@@ -63,7 +46,7 @@ class ProfileScreen extends StatelessWidget {
               Align(
                 child: OutlinedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(Icons.edit),
+                  icon: SvgPicture.asset("assets/icons/edit_icon_svg.svg"),
                   label: Text(
                     "Edit Profile",
                     style: AppTextStyle.body1.copyWith(
@@ -170,55 +153,6 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class FollowersAndFollowing extends StatelessWidget {
-  final String followers;
-  final String following;
-  const FollowersAndFollowing({
-    super.key,
-    required this.followers,
-    required this.following,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          children: [
-            Text(
-              following,
-              style: AppTextStyle.title2,
-            ),
-            const Text(
-              "Following",
-              style: AppTextStyle.body3,
-            ),
-          ],
-        ),
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 25),
-          height: 32,
-          width: 1,
-          color: const Color(0xffdddddd),
-        ),
-        Column(
-          children: [
-            Text(
-              followers,
-              style: AppTextStyle.title2,
-            ),
-            const Text(
-              "Followers",
-              style: AppTextStyle.body3,
-            ),
-          ],
-        )
-      ],
     );
   }
 }
