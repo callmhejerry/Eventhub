@@ -39,17 +39,13 @@ class _OrganizerProfileState extends State<OrganizerProfile>
         child: Column(
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const SizedBox(
-              height: 29,
-            ),
+            const Gap(29),
             const ProfileDisplayDetails(
               displayName: "Ashfak Sayem",
               followers: "350",
               following: "264",
             ),
-            const SizedBox(
-              height: 21,
-            ),
+            const Gap(21),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -2,6 +2,7 @@ import 'package:event_hub/core/styles/color_styles.dart';
 import 'package:event_hub/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gap/gap.dart';
 import 'package:readmore/readmore.dart';
 
 import 'widgets/profile_display_details.dart';
@@ -55,9 +56,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 25,
-              ),
+              const Gap(25),
               Text(
                 "About Me",
                 style: AppTextStyle.title1.copyWith(
