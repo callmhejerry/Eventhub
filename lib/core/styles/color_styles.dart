@@ -11,4 +11,5 @@ class AppColorStyle {
 
   // Text color
   static const darkTextColor = Color(0xff120D26);
+  static const greyTextColor = Color(0xff747688);
 }

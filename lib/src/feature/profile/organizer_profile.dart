@@ -2,7 +2,7 @@ import 'package:event_hub/core/styles/color_styles.dart';
 import 'package:event_hub/core/styles/text_styles.dart';
 import 'package:event_hub/core/widgets/event_card.dart';
 import 'package:event_hub/core/widgets/review_card.dart';
-import 'package:event_hub/src/feature/profile/widgets/profile_display_details.dart';
+import 'package:event_hub/src/feature/Profile/widgets/profile_display_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';

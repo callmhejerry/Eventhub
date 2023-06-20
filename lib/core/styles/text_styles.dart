@@ -26,7 +26,7 @@ class AppTextStyle {
     height: 34 / 22,
   );
 
-  static TextStyle title1 = const TextStyle(
+  static const TextStyle title1 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w500,
   );
