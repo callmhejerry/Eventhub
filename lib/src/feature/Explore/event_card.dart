@@ -63,8 +63,8 @@ class EventCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white.withOpacity(70 / 100),
                         ),
-                        child: Column(
-                          children: const [
+                        child: const Column(
+                          children: [
                             Text(
                               "10",
                               style: TextStyle(
@@ -119,9 +119,9 @@ class EventCard extends StatelessWidget {
                 const Gap(10),
                 Row(
                   children: [
-                    Stack(
+                    const Stack(
                       clipBehavior: Clip.none,
-                      children: const [
+                      children: [
                         Positioned(
                           left: 16 * 2,
                           child: CustomAvatar(

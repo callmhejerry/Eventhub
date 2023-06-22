@@ -120,49 +120,48 @@ class NotificationListTile extends StatelessWidget {
               14,
             ),
             Expanded(
-              flex: 193,
-              child: SizedBox(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    RichText(
-                      maxLines: 2,
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: author,
-                            style: AppTextStyle.title2.copyWith(
-                              color: AppColorStyle.darkTextColor,
-                            ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: RichText(
+                          maxLines: 2,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: author,
+                                style: AppTextStyle.title2.copyWith(
+                                  color: AppColorStyle.darkTextColor,
+                                ),
+                              ),
+                              const TextSpan(text: " "),
+                              TextSpan(
+                                text: notification,
+                                style: AppTextStyle.body3.copyWith(
+                                  color: AppColorStyle.darkTextColor,
+                                ),
+                              ),
+                            ],
                           ),
-                          const TextSpan(text: " "),
-                          TextSpan(
-                            text: notification,
-                            style: AppTextStyle.body3.copyWith(
-                              color: AppColorStyle.darkTextColor,
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                    if (option) ...[
-                      const Gap(8),
-                      const NotificationTileOption()
-                    ]
-                  ],
-                ),
+                      const Gap(
+                        14,
+                      ),
+                      Text(
+                        timeStamp,
+                        // maxLines: 2,
+                        style: AppTextStyle.subTitle2,
+                      )
+                    ],
+                  ),
+                  if (option) ...[const Gap(8), const NotificationTileOption()]
+                ],
               ),
             ),
-            const Gap(
-              14,
-            ),
-            Flexible(
-              flex: 50,
-              child: Text(
-                timeStamp,
-                style: AppTextStyle.subTitle2,
-              ),
-            )
           ],
         ),
       ],

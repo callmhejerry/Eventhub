@@ -15,8 +15,71 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const HomeAppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        actions: [
+          Container(
+            height: 36,
+            width: 36,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(29 / 100),
+              shape: BoxShape.circle,
+            ),
+            alignment: Alignment.center,
+            child: const Stack(
+              children: [
+                Icon(
+                  Icons.notifications_none_outlined,
+                  color: Colors.white,
+                ),
+                Positioned(
+                  right: 4,
+                  top: 4.5,
+                  child: Badge(
+                    backgroundColor: Colors.cyan,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const Gap(24),
+        ],
+        leading: IconButton(
+          icon: const Icon(
+            Icons.menu_rounded,
+            color: Colors.white,
+          ),
+          onPressed: () {},
+        ),
+        backgroundColor: AppColorStyle.primaryBlue,
+        title: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Current Location",
+                  style: AppTextStyle.subTitle2.copyWith(color: Colors.white),
+                ),
+                const Icon(
+                  Icons.arrow_drop_down,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            Text(
+              "New Yourk, USA",
+              style: AppTextStyle.subTitle1.copyWith(
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
+            )
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
         child: Column(
           children: [
             const HomeHeader(),
@@ -236,80 +299,4 @@ class CategoryChip extends StatelessWidget {
       ),
     );
   }
-}
-
-class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
-  const HomeAppBar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      centerTitle: true,
-      actions: [
-        Container(
-          height: 36,
-          width: 36,
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(29 / 100),
-            shape: BoxShape.circle,
-          ),
-          alignment: Alignment.center,
-          child: Stack(
-            children: const [
-              Icon(
-                Icons.notifications_none_outlined,
-                color: Colors.white,
-              ),
-              Positioned(
-                right: 4,
-                top: 4.5,
-                child: Badge(
-                  backgroundColor: Colors.cyan,
-                ),
-              )
-            ],
-          ),
-        ),
-        const Gap(24),
-      ],
-      leading: IconButton(
-        icon: const Icon(
-          Icons.menu_rounded,
-          color: Colors.white,
-        ),
-        onPressed: () {},
-      ),
-      backgroundColor: AppColorStyle.primaryBlue,
-      title: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                "Current Location",
-                style: AppTextStyle.subTitle2.copyWith(color: Colors.white),
-              ),
-              const Icon(
-                Icons.arrow_drop_down,
-                color: Colors.white,
-              ),
-            ],
-          ),
-          Text(
-            "New Yourk, USA",
-            style: AppTextStyle.subTitle1.copyWith(
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  @override
-  Size get preferredSize => const Size(double.infinity, 60);
 }

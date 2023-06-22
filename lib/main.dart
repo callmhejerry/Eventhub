@@ -1,4 +1,4 @@
-import 'package:event_hub/src/feature/Explore/explore_screen.dart';
+import 'package:event_hub/src/feature/Home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'core/theme/app_theme.dart';
@@ -17,7 +17,7 @@ class EventHub extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: LightTheme.themeData,
-      home: const ExploreScreen(),
+      home: const HomeScreen(),
     );
   }
 }

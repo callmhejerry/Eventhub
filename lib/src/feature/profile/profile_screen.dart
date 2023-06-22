@@ -99,8 +99,8 @@ class ProfileScreen extends StatelessWidget {
                       color: AppColorStyle.primaryBlue.withOpacity(.10),
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    child: Row(
-                      children: const [
+                    child: const Row(
+                      children: [
                         Icon(
                           Icons.edit,
                           size: 10,
