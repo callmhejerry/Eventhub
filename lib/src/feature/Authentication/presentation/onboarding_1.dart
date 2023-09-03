@@ -41,7 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           SizedBox.expand(
             child: Column(
               children: [
-                const Gap(19 + 44),
+                Gap(19 + 44 + MediaQuery.of(context).padding.top),
                 Image.asset(
                   onBoardingDetials[currentIndex]["image"]!,
                   width: double.infinity,
@@ -111,7 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                       InkWell(
                         onTap: () {
-                          if (currentIndex < onBoardingDetials.length) {
+                          if (currentIndex < onBoardingDetials.length - 1) {
                             setState(() {
                               currentIndex = currentIndex + 1;
                             });

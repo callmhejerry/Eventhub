@@ -1,4 +1,4 @@
-import 'package:event_hub/src/feature/Authentication/presentation/onboarding_1.dart';
+import 'package:event_hub/src/feature/Authentication/presentation/sign_in.dart';
 import 'package:flutter/material.dart';
 
 import 'core/theme/app_theme.dart';
@@ -17,7 +17,7 @@ class EventHub extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: LightTheme.themeData,
-      home: const OnboardingScreen(),
+      home: const SignInScreen(),
     );
   }
 }
